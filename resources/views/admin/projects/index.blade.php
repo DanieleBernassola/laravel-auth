@@ -34,8 +34,8 @@
                             <div class="d-flex gap-2">
                                 <a href="{{ route('admin.projects.show', $project) }}" as="button"
                                     class="btn btn-info"><i class="fa-solid fa-magnifying-glass"></i></a>
-                                <a href="#" as="button" class="btn btn-warning"><i
-                                        class="fa-solid fa-pencil"></i></a>
+                                <a href="{{ route('admin.projects.edit', $project) }}" as="button"
+                                    class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
                                 <a href="#" as="button" class="btn btn-danger"><i
                                         class="fa-solid fa-trash-can"></i></a>
                             </div>
