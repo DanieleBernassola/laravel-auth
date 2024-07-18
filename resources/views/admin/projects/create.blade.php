@@ -7,6 +7,8 @@
         </div>
         <a class="btn btn-light" href="{{ route('admin.projects.index') }}">Torna alla lista progetti</a>
 
+        @include('shared.errors')
+
         <form action="{{ route('admin.projects.store') }}" method="POST">
             @csrf
             <div class="mb-3">
