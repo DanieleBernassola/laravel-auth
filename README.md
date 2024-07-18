@@ -97,3 +97,9 @@ Cancellare tutti i file di default dalla cartella views e inserire i file presen
 4. avviare il server (php e node)
 
 Buon lavoro!
+
+continuate con l'esercitazione cominciata ieri - stessa repository e portate a conclusione le CRUD per la gestione dei progetti.
+nome repo: laravel-auth
+Bonus:
+provate a modificare il comportamento di default di laravel creando un campo SLUG per ogni progetto e riferendovi a quello per le operazioni di EDIT, SHOW, CREATE, DELETE;
+create una versione pubblica dei vostri progetti creando un controller Guest\ProjectController
