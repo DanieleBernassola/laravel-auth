@@ -24,7 +24,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create');
     }
 
     /**
@@ -38,12 +38,10 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $slug)
+    public function show(Project $project)
     {
-        $project = Project::where('slug', $slug)->first();
+        // $project = Project::where('slug', $slug)->first();
         return view('admin.projects.show', compact('project'));
-
-        dd($project);
     }
 
     /**

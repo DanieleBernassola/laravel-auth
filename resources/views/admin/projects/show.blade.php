@@ -9,5 +9,6 @@
             </div> --}}
         </div>
         <p>{{ $project->content }}</p>
+        <a class="btn btn-light" href="{{ route('admin.projects.index') }}">Torna alla lista progetti</a>
     </div>
 @endsection

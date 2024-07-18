@@ -5,7 +5,7 @@
         <div class="header-page d-flex justify-content-between align-items-center mb-5">
             <h2>Progetti</h2>
             <div>
-                <button class="btn btn-primary">Crea nuovo progetto</button>
+                <a class="btn btn-primary" as="button" href="{{ route('admin.projects.create') }}">Crea nuovo progetto</a>
             </div>
         </div>
 
@@ -26,7 +26,7 @@
                         <td>{{ $project->slug }}</td>
                         <td>
                             <div class="d-flex gap-2">
-                                <a href="{{ route('admin.projects.show', $project->id) }}" as="button"
+                                <a href="{{ route('admin.projects.show', $project) }}" as="button"
                                     class="btn btn-info"><i class="fa-solid fa-magnifying-glass"></i></a>
                                 <a href="#" as="button" class="btn btn-warning"><i
                                         class="fa-solid fa-pencil"></i></a>
