@@ -70,7 +70,18 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        return redirect()->route('admin.projects.index')->with('message', 'Progetto modificato correttamente');
+        $data = $request->validated();
+
+        $data['slug'] = Str::of($data['title'])->slug('-');
+
+        // $project->title = $data['title'];
+        // $project->content = $data['content'];
+        // $project->slug = $data['slug'];
+        // $project->save();
+
+        $project->update($data);
+
+        return redirect()->route('admin.projects.index')->with('message', $project->id(), 'Progetto modificato correttamente');
     }
 
     /**
@@ -78,6 +89,11 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        // SALVO POST ID ALTRIMENTI CANCELLANDO IL RECORD NON è SICURO RIUSCIRà AD ACCEDERE ALL'ID
+        $project_id = $project->id();
+
+        $project->delete();
+
+        return redirect()->route('admin.projects.index')->with('message', $project->id(), 'Progetto cancellato correttamente');
     }
 }
